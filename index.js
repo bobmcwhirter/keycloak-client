@@ -22,7 +22,7 @@ KeycloakClient.prototype.getRealm = function(callback) {
   return this.client.request( opts )
     .then( function(data) {
       return new Realm( self.client, data );
-    })
-}
+    });
+};
 
 module.exports = KeycloakClient;
