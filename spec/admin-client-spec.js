@@ -1,5 +1,5 @@
 
-var KeycloakClient = require('./../keycloak-client');
+var KeycloakClient = require('./../index');
 
 describe( "keycloak client", function() {
 

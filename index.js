@@ -7,7 +7,7 @@ var URL = require('url');
 var Form = require('./form');
 
 var Realm = require('./realm');
-var AuthenticatedClient = require('./authenticated-client');
+var AuthenticatedClient = require('keycloak-authenticated-client');
 
 function KeycloakClient(opts) {
   this.client = new AuthenticatedClient( opts );
