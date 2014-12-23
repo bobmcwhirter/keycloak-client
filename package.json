@@ -1,6 +1,6 @@
 {
   "name": "keycloak-admin-client",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Keycloak Admin Client",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "grunt-docco": "^0.3.3"
   },
   "dependencies": {
-    "keycloak-authenticated-client": "0.0.2",
+    "keycloak-authenticated-client": "0.0.5",
     "q": "^1.1.2"
   },
   "repository": {
