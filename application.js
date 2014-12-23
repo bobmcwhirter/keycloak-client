@@ -11,7 +11,7 @@ function Application(client, data) {
 
 Application.prototype.getRoles = function(callback) {
 
-  var opts = URL.parse( this.client.realmAdminUrl + '/applications/' + this.name + '/roles' );
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/applications/' + this.name + '/roles' );
   opts.type = 'json';
 
   var self = this;
@@ -23,7 +23,7 @@ Application.prototype.getRoles = function(callback) {
 }
 
 Application.prototype.getRole = function(name, callback) {
-  var opts = URL.parse( this.client.realmAdminUrl + '/applications/' + this.name + '/roles/' + name );
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/applications/' + this.name + '/roles/' + name );
   opts.type = 'json';
 
   var self = this;
@@ -36,7 +36,7 @@ Application.prototype.getRole = function(name, callback) {
 
 Application.prototype.createRole = function(data, callback ) {
 
-  var opts = URL.parse( this.client.realmAdminUrl + '/applications/' + this.name + '/roles');
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/applications/' + this.name + '/roles');
   opts.method = 'POST';
   opts.type = 'json';
 

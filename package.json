@@ -1,6 +1,6 @@
 {
   "name": "keycloak-admin-client",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Keycloak Admin Client",
   "main": "index.js",
   "scripts": {

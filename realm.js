@@ -9,7 +9,6 @@ var Role        = require('./role');
 var User        = require('./user');
 
 var util = require('./util' );
-var Form = require('./form');
 
 
 function Realm(client, data) {
@@ -18,7 +17,7 @@ function Realm(client, data) {
 }
 
 Realm.prototype.getApplications = function(callback) {
-  var opts = URL.parse( this.client.realmAdminUrl + '/applications');
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/applications');
   opts.type = 'json';
 
   var self = this;
@@ -30,7 +29,7 @@ Realm.prototype.getApplications = function(callback) {
 }
 
 Realm.prototype.getApplication = function(name, callback) {
-  var opts = URL.parse( this.client.realmAdminUrl + '/applications/' + name);
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/applications/' + name);
   opts.type = 'json';
 
   var self = this;
@@ -42,7 +41,7 @@ Realm.prototype.getApplication = function(name, callback) {
 }
 
 Realm.prototype.getRoles = function(callback) {
-  var opts = URL.parse( this.client.realmAdminUrl + '/roles' );
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/roles' );
   opts.type = 'json';
 
   var self = this;
@@ -54,7 +53,7 @@ Realm.prototype.getRoles = function(callback) {
 }
 
 Realm.prototype.getRole = function(name, callback) {
-  var opts = URL.parse( this.client.realmAdminUrl + '/roles/' + name );
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/roles/' + name );
   opts.type = 'json';
 
   var self = this;
@@ -67,7 +66,7 @@ Realm.prototype.getRole = function(name, callback) {
 
 Realm.prototype.createRole = function(data, callback ) {
 
-  var opts = URL.parse( this.client.realmAdminUrl + '/roles');
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/roles');
   opts.method = 'POST';
   opts.type = 'json';
 
@@ -83,7 +82,7 @@ Realm.prototype.createRole = function(data, callback ) {
 }
 
 Realm.prototype.getUsers = function(callback) {
-  var opts = URL.parse( this.client.realmAdminUrl + '/users/')
+  var opts = URL.parse( this.client.config.realmAdminUrl + '/users/')
   opts.type = 'json';
 
   var self = this;

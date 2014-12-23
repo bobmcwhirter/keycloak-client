@@ -4,7 +4,7 @@ var Q = require('q');
 var fs = require('fs');
 var http = require('http');
 var URL = require('url');
-var Form = require('./form');
+var Form = require('keycloak-auth-utils').Form;
 
 var Realm = require('./realm');
 var AuthenticatedClient = require('keycloak-authenticated-client');
@@ -14,7 +14,7 @@ function KeycloakClient(opts) {
 }
 
 KeycloakClient.prototype.getRealm = function(callback) {
-  var opts = URL.parse( this.client.realmAdminUrl );
+  var opts = URL.parse( this.client.config.realmAdminUrl );
   opts.type = 'json';
 
   var self = this;
